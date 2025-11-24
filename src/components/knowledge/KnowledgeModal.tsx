@@ -124,6 +124,7 @@ export function KnowledgeModal({
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
+  const contentBodyRef = useRef<HTMLDivElement | null>(null);
 
   const node = nodeId ? getKnowledgeById(nodeId) : null;
 
@@ -184,6 +185,18 @@ export function KnowledgeModal({
     loadContent();
   }, [isOpen, node]);
 
+  // Focus content body after markdown content is loaded
+  useEffect(() => {
+    if (!isLoading && markdownContent && contentBodyRef.current) {
+      // Use setTimeout to ensure the content is rendered before focusing
+      const timeoutId = setTimeout(() => {
+        contentBodyRef.current?.focus();
+      }, 100);
+
+      return () => clearTimeout(timeoutId);
+    }
+  }, [isLoading, markdownContent]);
+
   if (!node) {
     return null;
   }
@@ -192,7 +205,7 @@ export function KnowledgeModal({
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="fixed left-[50%] top-auto bottom-0 md:top-[50%] md:bottom-auto z-50 w-full max-w-4xl translate-x-[-50%] md:translate-y-[-50%] translate-y-0 p-0 gap-0 border-0 bg-transparent shadow-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 md:rounded-2xl rounded-t-[24px] rounded-b-none max-h-[85vh] overflow-hidden flex flex-col focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0 [&>button]:absolute [&>button]:right-6 [&>button]:top-6 [&>button]:z-10 [&>button]:h-11 [&>button]:w-11 [&>button]:flex [&>button]:items-center [&>button]:justify-center [&>button]:rounded-full [&>button]:bg-white/10 [&>button]:hover:bg-white/20 [&>button]:text-white [&>button]:cursor-pointer [&>button]:focus-visible:outline-none [&>button]:focus-visible:ring-0 [&>button]:focus-visible:ring-offset-0 [&>button]:transition-colors">
         {/* Modal Container with backdrop blur and styling */}
-        <div className="bg-[rgba(20,20,25,0.85)] backdrop-blur-[12px] border border-white/10 rounded-t-[24px] md:rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] flex flex-col max-h-[85vh] overflow-hidden">
+        <div className="bg-[rgba(20,20,25,0.85)] backdrop-blur-md border border-white/10 rounded-t-[24px] md:rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.8)] flex flex-col max-h-[85vh] overflow-hidden">
           {/* Header Section */}
           <DialogHeader className="flex flex-col px-6 pt-6 pb-4 border-b border-white/5 shrink-0">
             <div className="flex items-start justify-between gap-4 mb-4">
@@ -220,7 +233,11 @@ export function KnowledgeModal({
           </DialogHeader>
 
           {/* Content Body - Scrollable */}
-          <div className="scroll-container flex-1 overflow-y-auto px-6 py-6">
+          <div
+            ref={contentBodyRef}
+            tabIndex={-1}
+            className="scroll-container flex-1 overflow-y-auto px-6 py-6 focus:outline-none"
+          >
             {isLoading && (
               <div className="flex flex-col items-center justify-center py-12">
                 <Loader2 className="h-8 w-8 animate-spin text-gray-400 mb-4" />
