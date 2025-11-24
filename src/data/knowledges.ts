@@ -1294,7 +1294,7 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
     isRoot: false,
     related: 'concepts',
     tags: ['design-patterns'],
-    proficiencyScore: 2,
+    proficiencyScore: 5,
   },
 
   // Concepts - Design Patterns - Chain of Responsibility
