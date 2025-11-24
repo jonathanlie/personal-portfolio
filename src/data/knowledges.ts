@@ -1244,14 +1244,14 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
       'Multitenancy was the main theme of my work across frontend and backend in Ascenda.',
   },
 
-  // Concepts - Authentication / Authorization Integration
+  // Concepts - Authentication / Authorization
   {
-    id: 'authentication-authorization-integration',
-    title: 'Authentication / Authorization Integration',
+    id: 'authentication-authorization',
+    title: 'Authentication / Authorization',
     isRoot: false,
     related: 'concepts',
-    markdownFile: 'authentication-authorization-integration.md',
-    tags: ['authentication-authorization-integration'],
+    markdownFile: 'authentication-authorization.md',
+    tags: ['authentication-authorization'],
     proficiencyScore: 5,
     content:
       'Integrated centralized Identity Providers into applications using internal SDKs.',
