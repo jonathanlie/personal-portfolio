@@ -202,7 +202,7 @@ export function KnowledgeModal({
             </div>
 
             {/* Metadata Row: Proficiency and Tags */}
-            <div className="flex flex-wrap items-start gap-4">
+            <div className="flex flex-wrap items-center gap-4">
               {node.proficiencyScore && (
                 <ProficiencyScore
                   score={node.proficiencyScore}

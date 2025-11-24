@@ -69,12 +69,12 @@ export function KnowledgeListItem({ node, onClick }: KnowledgeListItemProps) {
           </CardTitle>
         </div>
         {isClickable ? (
-          <CardDescription className="text-sm md:text-base text-[#B0B0B0] dark:text-[#B0B0B0] leading-relaxed mt-2">
+          <CardDescription className="text-sm md:text-base text-[#B0B0B0] dark:text-[#B0B0B0] leading-relaxed mt-2 h-30 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {node.content}
           </CardDescription>
         ) : (
           node.content && (
-            <CardDescription className="text-sm md:text-base text-[#6B7280] dark:text-[#6B7280] leading-relaxed mt-2">
+            <CardDescription className="text-sm md:text-base text-[#6B7280] dark:text-[#6B7280] leading-relaxed mt-2 h-30 overflow-y-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
               {node.content}
             </CardDescription>
           )
@@ -85,7 +85,7 @@ export function KnowledgeListItem({ node, onClick }: KnowledgeListItemProps) {
           <div className="flex items-center justify-between w-full gap-4">
             <div className="flex flex-col gap-3 flex-1 min-w-0">
               {node.tags && node.tags.length > 0 && (
-                <div className="flex flex-wrap gap-2 w-full">
+                <div className="flex flex-nowrap gap-2 w-full h-6 overflow-x-auto overflow-y-hidden [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                   {node.tags.map((tag) => (
                     <KnowledgeTag key={tag} tag={tag} />
                   ))}

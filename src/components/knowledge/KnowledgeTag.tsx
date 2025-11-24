@@ -15,7 +15,7 @@ export function KnowledgeTag({ tag }: KnowledgeTagProps) {
   return (
     <Badge
       variant="outline"
-      className="bg-white/10 border-white/20 text-white/90 rounded-full px-3 py-0.5 text-xs uppercase tracking-wider font-normal"
+      className="bg-white/10 border-white/20 text-white/90 rounded-full px-2 py-0.5 text-[10px] uppercase tracking-wider font-normal"
     >
       {tag}
     </Badge>
