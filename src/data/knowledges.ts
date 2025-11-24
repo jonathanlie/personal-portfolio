@@ -736,44 +736,44 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
       'Safely consumed and maintained existing configuration for AWS infrastructure, executing controlled changes (e.g., Sidekiq resource scaling).',
   },
 
-  // Devops - Containerization & Orchestration
+  // Devops - Containerization
   {
-    id: 'containerization-orchestration',
-    title: 'Containerization & Orchestration',
+    id: 'containerization',
+    title: 'Containerization',
     isRoot: false,
     related: 'devops',
-    tags: ['containerization-orchestration'],
+    tags: ['containerization'],
     proficiencyScore: 4,
     content:
       'Understood the usage of docker containers and was able to debug issues if there are issues blocking deployment.',
   },
 
-  // Devops - Containerization & Orchestration - Docker
+  // Devops - Containerization - Docker
   {
     id: 'docker',
     title: 'Docker',
     isRoot: false,
-    related: 'containerization-orchestration',
+    related: 'containerization',
     tags: ['devops', 'containerization'],
-    proficiencyScore: 5,
+    proficiencyScore: 3,
   },
 
-  // Devops - Containerization & Orchestration - Docker - Docker Compose
+  // Devops - Containerization - Docker - Docker Compose
   {
     id: 'docker-compose',
     title: 'Docker Compose',
     isRoot: false,
     related: 'docker',
     tags: ['devops', 'containerization', 'docker'],
-    proficiencyScore: 5,
+    proficiencyScore: 3,
   },
 
-  // Devops - Containerization & Orchestration - Kubernetes (k8s)
+  // Devops - Containerization - Kubernetes (k8s)
   {
     id: 'kubernetes-k8s',
     title: 'Kubernetes (k8s)',
     isRoot: false,
-    related: 'containerization-orchestration',
+    related: 'containerization',
     tags: ['devops', 'orchestration'],
     proficiencyScore: 3,
     content: 'Used kubernetes operationally to ssh into pods and debug issues.',
