@@ -1240,6 +1240,8 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
     tags: ['concept', 'architecture', 'saas'],
     markdownFile: 'multitenancy.md',
     proficiencyScore: 7,
+    content:
+      'Multitenancy was the main theme of my work across frontend and backend in Ascenda.',
   },
 
   // Concepts - Authentication / Authorization Integration
