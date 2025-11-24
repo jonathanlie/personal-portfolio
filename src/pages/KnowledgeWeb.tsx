@@ -61,6 +61,18 @@ export function KnowledgeWeb() {
     return results.map((result) => result.item);
   }, [searchTerm, fuse]);
 
+  // Sort knowledges: items with markdownFile come first
+  const sortedKnowledges = useMemo(() => {
+    return [...filteredKnowledges].sort((a, b) => {
+      const aHasMarkdown = !!a.markdownFile;
+      const bHasMarkdown = !!b.markdownFile;
+
+      if (aHasMarkdown && !bHasMarkdown) return -1;
+      if (!aHasMarkdown && bHasMarkdown) return 1;
+      return 0;
+    });
+  }, [filteredKnowledges]);
+
   const handleKnowledgeClick = (knowledgeId: string) => {
     const knowledge = knowledges.find((k) => k.id === knowledgeId);
     if (knowledge?.markdownFile) {
@@ -126,7 +138,7 @@ export function KnowledgeWeb() {
             </div>
             <div className="h-[calc(100vh-400px)] min-h-[600px]">
               <KnowledgeList
-                nodes={filteredKnowledges}
+                nodes={sortedKnowledges}
                 onNodeClick={handleKnowledgeClick}
               />
             </div>
