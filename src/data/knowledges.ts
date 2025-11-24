@@ -1238,7 +1238,8 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
     isRoot: false,
     related: 'general-principles',
     tags: ['concept', 'architecture', 'saas'],
-    proficiencyScore: 9,
+    markdownFile: 'multitenancy.md',
+    proficiencyScore: 7,
   },
 
   // Concepts - Authentication / Authorization Integration
