@@ -147,7 +147,7 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
   // Frontend - Typescript
   {
     id: 'typescript',
-    title: 'Typescript',
+    title: 'TypeScript',
     isRoot: false,
     related: 'frontend',
     tags: ['typescript'],
@@ -326,7 +326,7 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
   // Frontend - Accessibility - a11y - aria attributes
   {
     id: 'aria-attributes',
-    title: 'aria attributes',
+    title: 'Aria Attributes',
     isRoot: false,
     related: 'accessibility-a11y',
     tags: ['frontend', 'accessibility', 'a11y'],
@@ -338,7 +338,7 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
   // Frontend - Accessibility - a11y - keyboard navigation
   {
     id: 'keyboard-navigation',
-    title: 'keyboard navigation',
+    title: 'Keyboard Navigation',
     isRoot: false,
     related: 'accessibility-a11y',
     tags: ['frontend', 'accessibility', 'a11y'],
@@ -350,7 +350,7 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
   // Frontend - Accessibility - a11y - voiceover
   {
     id: 'voiceover',
-    title: 'voiceover',
+    title: 'Voiceover',
     isRoot: false,
     related: 'accessibility-a11y',
     tags: ['frontend', 'accessibility', 'a11y'],
@@ -362,7 +362,7 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
   // Frontend - Accessibility - a11y - semantic HTML
   {
     id: 'semantic-html',
-    title: 'semantic HTML',
+    title: 'Semantic HTML',
     isRoot: false,
     related: 'accessibility-a11y',
     tags: ['frontend', 'accessibility', 'a11y', 'html'],
@@ -434,7 +434,7 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
   // Frontend - Web Performance - Code splitting
   {
     id: 'code-splitting',
-    title: 'Code splitting',
+    title: 'Code Splitting',
     isRoot: false,
     related: 'web-performance',
     tags: ['frontend', 'optimization', 'performance'],
@@ -446,7 +446,7 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
   // Frontend - Web Performance - Lazy loading
   {
     id: 'lazy-loading',
-    title: 'Lazy loading',
+    title: 'Lazy Loading',
     isRoot: false,
     related: 'web-performance',
     tags: ['frontend', 'optimization', 'performance'],
@@ -868,7 +868,7 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
   // Devops - CI/CD - Github Actions
   {
     id: 'github-actions',
-    title: 'Github Actions',
+    title: 'GitHub Actions',
     isRoot: false,
     related: 'ci-cd',
     tags: ['devops', 'ci-cd'],
@@ -955,7 +955,7 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
   // Tooling - Observability - Appsignal
   {
     id: 'appsignal',
-    title: 'Appsignal',
+    title: 'AppSignal',
     isRoot: false,
     related: 'observability',
     tags: ['tooling', 'observability', 'monitoring'],
@@ -1043,7 +1043,7 @@ export const KNOWLEDGE_DATA: Knowledge[] = [
   // Tooling - Testing (Cross-Browser) - Browserstack
   {
     id: 'browserstack',
-    title: 'Browserstack',
+    title: 'BrowserStack',
     isRoot: false,
     related: 'testing-cross-browser',
     tags: ['tooling', 'testing'],
